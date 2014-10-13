@@ -1,0 +1,40 @@
+{{ template "chrome/head.html" . }}
+<body>
+<header>
+    <h1 class="logo">
+        <a href="/">
+            <img src="{{ .Site.BaseUrl }}/image/logo.png" alt="Zoomazing">
+        </a>
+    </h1>
+    <form class="search" action="http://www.google.com" method="get">
+        <label for="field_search">Search Zoomazing</label>
+        <input type="text" placeholder="search zoomazing" name="q">
+        <input type="submit" name="submit" value="go">
+    </form>
+    <nav class="quick-links">
+        <ul>
+            <li>
+                <a href="#">Quick Link</a>
+            </li>
+            <li>
+                <a href="#">Quick Link</a>
+            </li>
+            <li>
+                <a href="#">Quick Link</a>
+            </li>
+            <li>
+                <a href="#">Quick Link</a>
+            </li>
+        </ul>
+    </nav>
+    <img src="{{ .Site.BaseUrl }}/image/carousel.jpg" alt="Carousel">
+
+</header>
+
+    
+
+{{ template "chrome/sidebar.html" . }}
+
+
+  </body>
+</html>

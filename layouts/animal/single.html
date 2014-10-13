@@ -1,0 +1,57 @@
+{{ partial "head.html" . }}
+<body class="animal">
+
+{{ partial "header.html" . }}
+<img class="header-image" src="/image/animal-header.jpg" alt="{{ .Title }}">
+{{ partial "aside-animal.html" . }}
+<article class="main-content">
+    <h1>{{ .Title }}</h1>
+    <figure class="feature-image">
+        <img src="/image/animal/{{ .Params.feature }}" alt="{{ .Title }}">
+    </figure>
+    <section class="feature-content">
+    {{ .Content }}
+    </section>
+</article>
+<section class="see-also">
+    <h2>See Also</h2>
+    <ul class="terms">
+        {{ $cdescs := index .Site.Taxonomies "continent-descs" }}
+        {{ range $continent := .Params.continents }}
+            {{ $pages := index $cdescs ($continent | lower | urlize) }}
+                {{ if len $pages }}
+                    {{ $page := index $pages 0 }}
+<li>
+	<a href="/continents/{{ $continent | urlize }}" class="thumb">
+		<img src="/image/{{ $page.Page.Params.thumb }}" alt="{{ $page.Page.Title }}">
+	</a>
+	<a href="/continents/{{ $continent | urlize }}" class="link">{{ $page.Page.Title }}</a>
+	<div class="summary">
+		{{ $page.Page.Description }}
+	</div>
+</li>
+
+                {{end}}
+        {{ end }}
+
+        {{ $fdescs := index .Site.Taxonomies "family-descs" }}
+        {{ range $family := .Params.families }}
+            {{ $pages := index $fdescs ($family | lower | urlize) }}
+                {{ if len $pages }}
+                    {{ $page := index $pages 0 }}
+<li>
+	<a href="/families/{{ $family | urlize }}" class="thumb">
+		<img src="/image/{{ $page.Page.Params.thumb }}" alt="{{ $page.Page.Title }}">
+	</a>
+	<a href="/continents/{{ $family | urlize }}" class="link">{{ $page.Page.Title }}</a>
+	<div class="summary">
+		{{ $page.Page.Description }}
+	</div>
+</li>
+                {{end}}
+        {{ end }}
+    </ul>
+</section>
+{{ partial "footer.html" . }}
+</body>
+</html>

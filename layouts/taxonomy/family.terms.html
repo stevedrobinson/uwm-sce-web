@@ -1,0 +1,39 @@
+{{ partial "head.html" . }}
+<body class="">
+
+{{ partial "header.html" . }}
+<img class="header-image" src="/image/animal-header.jpg" alt="{{ .Title }}">
+
+{{ partial "aside-terms.html" . }}
+<section class="main-content">
+    <h1>Animal Families</h1>
+<p>This is the description for the families page</p>
+  <ul class="terms">
+      {{ $descs := index .Site.Taxonomies "family-descs" }}
+      {{ $data := .Data }}
+        {{ range $key, $value := .Data.Terms.Alphabetical }}
+            {{ $pages := index $descs ($value.Name | urlize) }}
+
+                {{ if len $pages }}
+                    {{ $page := index $pages 0 }}
+<li>
+	<a href="/{{ $data.Plural }}/{{ $value.Name | urlize}}" class="thumb">
+		<img src="/image/{{ $page.Page.Params.thumb }}" alt="{{ $page.Page.Title }}">
+	</a>
+	<a href="/{{ $data.Plural }}/{{ $value.Name | urlize}}" class="link">{{ $page.Page.Title }}</a>
+	<div class="summary">
+		{{ $page.Page.Description }}
+	</div>
+</li>
+
+                {{ else }}
+<li><a href="/{{ $data.Plural }}/{{ $value.Name | urlize}}" class="link"> {{ title $value.Name }}</a></li>
+                {{ end }}
+      {{ end }}
+  </ul>
+
+</section>
+{{ partial "footer.html" . }}
+
+  </body>
+</html>

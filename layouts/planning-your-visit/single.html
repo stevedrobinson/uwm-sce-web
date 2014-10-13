@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+<body class="content">
+
+{{ partial "header.html" . }}
+<img class="header-image" src="/image/planning-your-visit-header.jpg" alt="Planning Your Visit">
+<aside class="contextual-nav">
+    {{ partial "planning-your-visit-nav.html" . }}
+</aside>
+<article class="main-content">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+</article>
+{{ partial "footer.html" . }}
+</body>
+</html>

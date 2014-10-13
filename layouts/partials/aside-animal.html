@@ -1,0 +1,32 @@
+<aside class="contextual-nav">
+    {{ $continents := .Site.Taxonomies.continents }}
+    {{ range $continent := .Params.continents }}
+    <section>
+
+    <h2>{{ title $continent }}</h2>
+    <nav>
+        <ul>
+        {{ range index $continents ($continent | lower | urlize) }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+        {{ end }}
+        </ul>
+    </nav>
+</section>
+    {{ end }}
+    <section>
+    {{ $families := .Site.Taxonomies.families }}
+    {{ range $family := .Params.families }}
+    <section>
+
+    <h2>{{ title $family }}</h2>
+    <nav>
+        <ul>
+        {{ range index $families ($family | lower | urlize) }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+        {{ end }}
+        </ul>
+    </nav>
+</section>
+    {{ end }}
+    {{ template "chrome/search.html" . }}
+</aside>

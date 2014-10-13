@@ -1,0 +1,26 @@
+---
+baseurl: "http://dev.zoomazing.brilliantmetrics.com"
+title: "Zoomazing - The Worlds Greatest Zoo"
+Taxonomies:
+        family: "families"
+        continent: "continents"
+        continent-desc: "continent-descs"
+        family-desc: "family-descs"
+
+menu:
+    main:
+         - Name: "Planning Your Visit"
+           Weight: 10
+           Url: "/planning-your-visit/"
+         - Name: "Animal Families"
+           Weight: 20
+           Url: "/families/"
+         - Name: "Geographies"
+           Weight: 30
+           Url: "/continents/"
+         - Name: "Membership"
+           Weight: 40
+           Url: "/membership/"
+    membership:
+    planning_your_visit:
+

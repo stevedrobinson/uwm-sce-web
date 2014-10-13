@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+<body>
+
+{{ partial "header.html" . }}
+<img class="header-image" src="/image/planning-your-visit-header.jpg" alt="Planning Your Visit">
+
+<aside class="contextual-nav">
+    {{ partial "planning-your-visit-nav.html" . }}
+</aside>
+<section class="main-content">
+        <h1>Planning Your Visit</h1>
+<p>This is some intro text for planning your visit. For now, it's defined in the section template because I don't have any other way to define it.</p>
+{{ partial "content-list.html" . }}
+</section>
+  </body>
+{{ partial "footer.html" . }}
+</html>

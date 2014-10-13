@@ -1,0 +1,26 @@
+<aside class="contextual-nav">
+    <section>
+    <h2>Geographic Regions</h2>
+    <nav>
+        <ul>
+            {{ range $key, $value := .Site.Taxonomies.continents.Alphabetical }}
+                <li><a href="/continents/{{ $value.Name }}">{{ title $value.Name }}</a>
+
+            {{ end }}
+        </ul>
+    </nav>
+</section>
+
+    <section>
+    <h2>Families</h2>
+    <nav>
+        <ul>
+            {{ range $key, $value := .Site.Taxonomies.families.Alphabetical }}
+                <li><a href="/families/{{ $value.Name }}">{{ title $value.Name }}</a>
+
+            {{ end }}
+        </ul>
+    </nav>
+</section>
+    {{ template "chrome/search.html" . }}
+</aside>

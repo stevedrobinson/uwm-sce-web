@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Memberships on Zoomazing - The Worlds Greatest Zoo </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/membership/index.xml/</link>
+    
+    
+    
+    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Maps &amp; Parking</title>
+      <link>http://localhost:1313/membership/maps-and-parking/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/membership/maps-and-parking/</guid>
+      <description>&lt;p&gt;Coming from |___&lt;strong&gt;&lt;em&gt;(your address&lt;/em&gt;&lt;/strong&gt;____&lt;strong&gt;&lt;em&gt;| &lt;img src=&#34;google map of zoo url&#34; alt=&#34;map&#34; /&gt;
+
+Going to    |&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;Zoomazing address _&lt;/em&gt;&lt;/strong&gt;_|
+|Directions |:&lt;/p&gt;
+
+&lt;p&gt;###Parking
+Parking garage ($8/day with Zoomazing validation) located on Michigan and Plankington. Meter parking on the streets.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

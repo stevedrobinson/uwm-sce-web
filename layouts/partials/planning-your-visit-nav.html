@@ -1,0 +1,11 @@
+<h2>Planning Your Visit</h2>
+<nav>
+    <ul>
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.planning_your_visit }}
+        <li class="{{if $currentNode.HasMenuCurrent "planning_your_visit" . }}active{{end}}">
+            <a href="{{ .Url }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>

@@ -1,0 +1,19 @@
+{{ partial "head.html" . }}
+<body class="terms">
+
+{{ partial "header.html" . }}
+{{ partial "aside-terms.html" . }}
+<section class="main-content">
+    <h1>{{ .Title }}</h1>
+    <p> {{ .Data.Singular }} </p>
+  <ul class="animal-terms">
+      {{ $data := .Data }}
+        {{ range $key, $value := .Data.Terms.Alphabetical }}
+        <li><span><a href="/{{ $data.Plural }}/{{ $value.Name | urlize}}"> {{ $value.Name }}</a></span></li>
+      {{ end }}
+  </ul>
+</section>
+{{ partial "footer.html" . }}
+
+  </body>
+</html>
