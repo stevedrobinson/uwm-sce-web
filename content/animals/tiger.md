@@ -1,5 +1,5 @@
 ---
-title: "Begnal Tiger"
+title: "Bengal Tiger"
 description: "Don't let the purrr fool you."
 families: [
     "Big Cats"
