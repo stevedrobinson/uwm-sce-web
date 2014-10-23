@@ -21,6 +21,4 @@ menu:
          - Name: "Membership"
            Weight: 40
            Url: "/membership/"
-    membership:
-    planning_your_visit:
 

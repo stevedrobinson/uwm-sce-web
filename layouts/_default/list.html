@@ -5,16 +5,7 @@
 {{ partial "aside-terms.html" . }}
 <section class="main-content">
 <h1> {{ .Title }} </h1>
-        {{ $cdescs := index .Site.Taxonomies "continent-descs" }}
-            {{ $pages := index $cdescs (.Title | lower) }}
-            <li>
-                {{ if len $pages }}
-                    {{ $page := index $pages 0 }}
-                    <img src="/images/continents/{{ $page.Page.Params.thumb }}" alt="{{ $continent }}">
-                {{end}}
-                <a href="/continents/{{ $continent | urlize }}">{{ $continent }}</a>
-            </li>
-
+<ul>
       {{ range .Data.Pages }}
       <li><span><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
       {{ end }}
