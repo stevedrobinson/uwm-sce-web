@@ -5,7 +5,6 @@
         {{ range .Site.Menus.membership }}
         <li class="{{if $currentNode.HasMenuCurrent "membership" . }}active{{end}}">
             <a href="{{ .Url }}">{{ .Name }}</a>
-<p>{{ $currentNode.HasMenuCurrent "membership" . }}</p>
         </li>
         {{ end }}
     </ul>
