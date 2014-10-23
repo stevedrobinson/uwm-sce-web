@@ -1,5 +1,5 @@
 ---
-baseurl: "http://dev.zoomazing.brilliantmetrics.com"
+baseurl: "http://192.168.0.180:8080/"
 title: "Zoomazing - The Worlds Greatest Zoo"
 Taxonomies:
         family: "families"
