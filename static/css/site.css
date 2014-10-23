@@ -71,7 +71,6 @@ body {
 
 /* HEADER */
 .site-header {
-    border-bottom: 1px solid #999999;
     position: relative;
     padding-right: 220px;
     min-height: 50px;
@@ -83,34 +82,74 @@ body {
     top: 15px;
     right: 15px;
 }
-.site-header nav {
+
+/* Main Nav */
+.main-nav {
     padding: 0 20px;
     background-color: #3db1ff;
     border-radius: 0 8px 8px 0;
     margin: 20px 0 0 -10px;
     height: 30px;
     width: 700px;
+    clear: both;
 }
-.site-header nav li {
+.main-nav li {
     float: left;
     border-right: 1px solid #fff;
 }
 
-.site-header nav li:last-child {
+.main-nav li:last-child {
     border-right: none;
 }
 
-.site-header nav a {
+.main-nav a {
     line-height: 30px;
     color: #fff;
     text-decoration: none;
     padding: 0 12px;
     display: block;
 }
-.site-header nav a:hover,
-.site-header nav .active {
+.main-nav a:hover,
+.main-nav .active {
     background-color: #69f0a1;
 }
+
+/* SEARCH */
+.search {
+    display: block;
+    overflow: hidden;
+}
+
+.search label {
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+
+.search .input {
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #3db1ff;
+    padding: 3px 8px;
+    margin: 0;
+    float: left;
+    height: 26px;
+    box-sizing:border-box;
+    line-height: 20px;
+    width: 200px;
+}
+.search .button {
+    background-color: #3db1ff;
+    color: #fff;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 0 4px 4px 0;
+    height: 26px;
+    box-sizing:border-box;
+    font-size: 12px;
+    line-height: 20px;
+    box-sizing:border-box;
+}
+    
 
 /* Contextual Navigation (left column) */
 
@@ -221,6 +260,42 @@ body {
     float: right;
     margin: 0 0 10px 10px;
 }
+.main-content table {
+    border-left: 1px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.main-content th,
+.main-content td {
+    border-right: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    padding: 5px 10px;
+}
+
+.main-content em {
+    font-style: italic;
+}
+
+/* THREE-PANE GRAPHIC */
+.flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.flex-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.flex-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 
 /* TERMS LISTING (CONTINENTS & FAMILIES) */
 
@@ -259,4 +334,61 @@ body {
     border-radius: 0 0 10px 10px;
     color: #fff;
 }
+/* HOME PAGE */
+.home-header {
+    position: relative;
+    padding-right: 220px;
+    min-height: 50px;
+    padding: 10px 10px 20px 10px;
+    overflow: hidden;
+}
 
+.home-header h1 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.home-header .search {
+    float: right;
+}
+.home-header .quick-links {
+    float: right;
+    clear: right;
+    margin: 15px 0;
+}
+.home-main {
+    width: 700px;
+    float: left;
+}
+
+.home-aside {
+    width: 240px;
+    margin-left: 720px;
+}
+
+/* QUICK LINKS */
+.quick-links li {
+    float: left;
+    margin-left: 15px;
+}
+
+.quick-links a {
+    display: block;
+    border-radius: 50%;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    background-color: #2ecc71;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 5px 20px;
+}
+
+/* CAROUSEL */
+.carousel {
+    width: 980px;
+    margin: 0 -10px;
+}

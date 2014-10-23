@@ -1,16 +1,8 @@
-{{ template "chrome/head.html" . }}
+{{ partial "head.html" . }}
 <body>
-<header>
-    <h1 class="logo">
-        <a href="/">
-            <img src="{{ .Site.BaseUrl }}/image/logo.png" alt="Zoomazing">
-        </a>
-    </h1>
-    <form class="search" action="http://www.google.com" method="get">
-        <label for="field_search">Search Zoomazing</label>
-        <input type="text" placeholder="search zoomazing" name="q">
-        <input type="submit" name="submit" value="go">
-    </form>
+<header class="home-header">
+    {{ partial "logo.html" . }}
+    {{ partial "search.html" . }}
     <nav class="quick-links">
         <ul>
             <li>
@@ -27,13 +19,18 @@
             </li>
         </ul>
     </nav>
-    <img src="{{ .Site.BaseUrl }}/image/carousel.jpg" alt="Carousel">
-
+    <img class="carousel" src="{{ .Site.BaseUrl }}/image/home-header.jpg" alt="Carousel">
+    {{ partial "main-nav.html" . }}
 </header>
+<section class="home-main">
+   main
+</section>
+<aside class="home-aside">
+    aside
+</aside>
 
     
 
-{{ template "chrome/sidebar.html" . }}
 
 
   </body>

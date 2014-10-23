@@ -18,14 +18,14 @@ Zoomazing is open all year, but some exhibitions are closed during the winter se
 
 *You can visit some of these animals in their winter shelter
 
-###Hours of Operation
-|                   | Memorial Day | Labor Day to |
-|                   | to Labor Day | Memorial Day |
-|-------------------|:------------:|:------------:|
-| Monday - Friday   |  9am - 9pm   |  9am to 6pm  |
-| Saturday          |  7am - 9pm   |  9am to 6pm  |
-| Sunday            |  7am - 6pm   |    closed    |
+## Hours of Operation
 
-###Special Days
+|                   | Memorial Day<br>to Labor Day  | Labor Day to <br>Memorial Day |
+|-------------------|:------------:|:------------:|
+| Monday - Friday   |  9am to 9pm   |  9am to 6pm  |
+| Saturday          |  7am to 9pm   |  9am to 6pm  |
+| Sunday            |  7am to 6pm   |    closed    |
+
+## Special Days
 *Tuesday* is _Senior Day_
 *Monday, Wednesday* and *Thursday* available to [School Groups](url to School Groups page) as well as open to the public
