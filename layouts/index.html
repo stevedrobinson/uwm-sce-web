@@ -22,11 +22,78 @@
     <img class="carousel" src="{{ .Site.BaseUrl }}/image/home-header.jpg" alt="Carousel">
     {{ partial "main-nav.html" . }}
 </header>
-<section class="home-main">
-   main
+<section class="home-main main-content">
+    <h1>Learn About Our Animals</h1>
+    <p>Browse by animal family or by geography below. Learn about your animal friends before you visit.</p>
+    <h2>By Geography</h2>
+  <ul class="terms">
+      {{ $descs := index .Site.Taxonomies "continent-descs" }}
+        {{ range $key, $taxonomy := .Site.Taxonomies.continents }}
+	    {{ $pages := index $descs $key }}
+
+                {{ if len $pages }}
+                    {{ $page := index $pages 0 }}
+<li>
+	<a href="/continents/{{ $key }}" class="thumb">
+		<img src="/image/{{ $page.Page.Params.thumb }}" alt="{{ $page.Page.Title }}">
+	</a>
+	<a href="/continents/{{ $key }}" class="link">{{ $page.Page.Title }}</a>
+	<div class="summary">
+		{{ $page.Page.Description }}
+	</div>
+</li>
+
+                {{ end }}
+      {{ end }}
+  </ul>
+
+    <h2>By Animal Family</h2>
+  <ul class="terms">
+      {{ $descs := index .Site.Taxonomies "family-descs" }}
+        {{ range $key, $taxonomy := .Site.Taxonomies.families }}
+	    {{ $pages := index $descs $key }}
+
+                {{ if len $pages }}
+                    {{ $page := index $pages 0 }}
+<li>
+	<a href="/families/{{ $key }}" class="thumb">
+		<img src="/image/{{ $page.Page.Params.thumb }}" alt="{{ $page.Page.Title }}">
+	</a>
+	<a href="/families/{{ $key }}" class="link">{{ $page.Page.Title }}</a>
+	<div class="summary">
+		{{ $page.Page.Description }}
+	</div>
+</li>
+
+                {{ end }}
+      {{ end }}
+  </ul>
 </section>
 <aside class="home-aside">
-    aside
+    <section>
+    <h2>Get Animal Updates!</h2>
+    <p>Get the latest news on all our animals, right in your email inbox!</p>
+    <form action="#" method="get">
+    <label for="field-name">Name:</label>
+    <input type="text" name="name" id="field-name" placeholder="your full name"><br><br>
+    <label for="field-email">Email:</label>
+    <input type="email" name="email" id="field-email" placeholder="your email address"><br><br>
+    <input type="submit" name="submit" value="Send Me Updates">
+    </form>
+    </section>
+
+    <section>
+        <a href="/planning-your-visit"><img src="/image/planning-your-visit-thumb.jpg" alt="planning your visit"></a>
+        <h2><a href="/planning-your-visit">Plan Your Visit</a></h2>
+        <p>Plan your next visit to Zoomazing. Learn about food options, directions and what else to do while you are here.</p>
+        <a class="learn-more-button" href="/planning-your-visit/">Learn More</a>
+    </section>
+    <section>
+        <a href="/membership"><img src="/image/membership-thumb.jpg" alt="membership"></a>
+        <h2><a href="/membership">Become a Zoomazing Member</a></h2>
+        <p>Become a member today and enjoy perks such as free admission and a chance to feed the lions.</p>
+        <a class="learn-more-button" href="/membership/">Learn More</a>
+    </section>
 </aside>
 
     
